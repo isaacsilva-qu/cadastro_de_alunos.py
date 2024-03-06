@@ -8,6 +8,3 @@ class Aluno(Pessoa):
 
     def __repr__(self):
         return f"{super().__repr__()}, {self.curso}, {self.nota}"
-
-if __name__ == "__main__":
-    print(Aluno("Jonas", 23, "Pyyhon", 10))

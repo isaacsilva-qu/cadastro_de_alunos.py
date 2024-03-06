@@ -10,7 +10,7 @@ class Escola:
 
     def editarAluno(self, aluno: Aluno):
         for alu in self.alunos:
-            if alu.matricula == aluno.matricula:
+            if str(alu.matricula) == str(aluno.matricula):
                 alu.nome = aluno.nome
                 alu.idade = aluno.idade
                 alu.curso = aluno.curso
@@ -27,16 +27,3 @@ class Escola:
 
     def listarAluno(self):
         return self.alunos
-
-if __name__ == "__main__":
-    escola = Escola("Infinity School")
-    a1 = Aluno("Jonas", 19, "Python", 10)
-    a2 = Aluno("Isaac", 22, "JavaScript", 10)
-    escola.cadastrarAluno(a1)
-    escola.cadastrarAluno(a2)
-    print(escola.listarAluno())
-    a1.nome = "Jonas Lopes"
-    escola.editarAluno(a1)
-    print(escola.listarAluno())
-    escola.removerAluno(a1.matricula)
-    print(escola.listarAluno())
