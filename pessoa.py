@@ -7,6 +7,3 @@ class Pessoa:
 
     def __repr__(self):
         return f"({self.matricula}, {self.nome}, {self.idade})"
-
-if __name__ == "__main__":
-    print(Pessoa("Jonas", 23))
